@@ -8,7 +8,7 @@ void Generator::debugFunctions(std::ostream &out) const
     {
         out << 
             "void " << d_baseclassScope << "setDebug(bool onOff)\n"
-            "{}\n"
+            "{ (void)(onOff); }\n"
             "\n"
             "bool " << d_baseclassScope << "debug() const\n"
             "{\n"
