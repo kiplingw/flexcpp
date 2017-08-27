@@ -24,7 +24,10 @@ void Generator::inputImplementation(ostream &out) const
 :
     d_in(iStream),
     d_lineNr(lineNr)
-{}
+{
+    if(not *iStream)
+        throw std::runtime_error("Cannot read from stream");
+}
 
 size_t )" << d_baseclassScope << R"(Input::get()
 {
